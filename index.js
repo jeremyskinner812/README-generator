@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
-// TODO: Create an array of questions for user input
+// requiring fs, path, inquirer, and the generate markdown file/function
+
+// inquirer prompts
 const questions = [
     {
         type: 'input',
@@ -34,7 +35,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What kind of license does your project have?',
-        choices: ['APACHE 2.0', 'BSD 3', 'Eclipse Public License 1.0', 'GNU GPL v3', 'MIT', 'None'],
+        choices: ['APACHE_2.0', 'BSD_3', 'Eclipse_Public_License_1.0', 'GNU_GPL_v3', 'MIT', 'None'],
     },
     {
         type: 'input',
@@ -58,12 +59,11 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// functios to use fs to write file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
         console.info('Generating README File');

@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function to render the license badge based on user input
 function renderLicenseBadge(license) {
   if(license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-success)`
@@ -8,8 +7,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// function to only render license link if license was chosen
 function renderLicenseLink(license) {
   if(license !== 'None') {
     return `* [License](#license)`;
@@ -19,8 +17,7 @@ function renderLicenseLink(license) {
 
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// function to render license section if a license was chosen
 function renderLicenseSection(license) {
   if(license !== 'None') {
     return `## License
@@ -31,11 +28,52 @@ This project is licensed under the ${license} license.`;
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate the markdown content with user inputs
 function generateMarkdown(data) {
   return `# ${data.title}
+${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+${renderLicenseLink(data.license)}
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.test}
+
+## Questions
+
+If you have any questions about the project, have suggestions, or would like to contribute, please contact me at ${data.email}.
+You can view my other projects on github [${data.github}](https://github.com/${data.github}/).
+
 
 `;
 }
-
+//  exporting file 
 module.exports = generateMarkdown;
