@@ -19,15 +19,16 @@ A Node application that takes user input to prompts and creates a markdown file 
 
 ## Installation
 
-Run npm i in the terminal
+Run npm i in the terminal to install all dependencies for the application
 
 ## Usage
 
-Run node index.js in the terminal and answer all the questions as they appear. After answering all questions, your README.md file will be created.
+Run node index.js in the terminal and answer all the questions as they appear. After answering all questions, your README.md file will be created. 
+[VIDEO DEMO](https://drive.google.com/file/d/1ssDZoVkn4h40ffLUNzM9vdqVQRUI-I--/view?usp=sharing)
 
 ## License
 
-N/A
+MIT
 
 ## Contributing
 
